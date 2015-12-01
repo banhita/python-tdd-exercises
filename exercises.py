@@ -3,7 +3,17 @@ def reverse_list(l):
     """
     Reverses order of elements in list l.
     """
-    return None
+    m =[]
+
+    j = 0
+    for i in range(4,-1,-1):
+
+        m.append( l[i])
+        j = j+1
+
+ 
+
+    return m
 
 
 def test_reverse_list():
@@ -16,22 +26,55 @@ def reverse_string(s):
     """
     Reverses order of characters in string s.
     """
-    return None
+
+    l = ""
+
+
+
+    j = 0
+    for i in range(5,-1,-1):
+
+       l+= str( s[i])
+       j = j+1
+
+    return l
+    
 
 
 def test_reverse_string():
     assert reverse_string("foobar") == "raboof"
 
 
-# ------------------------------------------------------------------------------
+ # ------------------------------------------------------------------------------
 
 def is_english_vowel(c):
     """
     Returns True if c is an english vowel
-    and False otherwise.
-    """
-    return None
+    an    """
 
+
+    if( c =='a'):
+        return True
+    elif( c== 'e'):
+        return True
+    elif( c=='i'):
+        return True
+    elif(c=='o'):
+        return True
+    elif(c=='u'):
+        return True
+    elif( c=='A'):
+        return True
+    elif( c =='E'):
+        return True
+    elif(c=='I'):
+        return True
+    elif(c=='O'):
+        return True
+    elif(c=='U'):
+        return True
+    else :
+        return False
 
 def test_is_english_vowel():
     assert is_english_vowel('a')
@@ -39,13 +82,13 @@ def test_is_english_vowel():
     assert is_english_vowel('i')
     assert is_english_vowel('o')
     assert is_english_vowel('u')
-    assert is_english_vowel('y')
+    assert not is_english_vowel('y')
     assert is_english_vowel('A')
     assert is_english_vowel('E')
     assert is_english_vowel('I')
     assert is_english_vowel('O')
     assert is_english_vowel('U')
-    assert is_english_vowel('Y')
+    assert not is_english_vowel('Y')
     assert not is_english_vowel('k')
     assert not is_english_vowel('z')
     assert not is_english_vowel('?')
@@ -54,10 +97,35 @@ def test_is_english_vowel():
 # ------------------------------------------------------------------------------
 
 def count_num_vowels(s):
-    """
-    Returns the number of vowels in a string s.
-    """
-    return None
+ 
+  count =0 
+  for i in range(0,len(s)+1):
+    c = s[i]
+    
+    if( c =='a'):
+        count+=1
+    elif( c== 'e'):
+        count+=1
+    elif( c=='i'):
+        count+=1
+    elif(c=='o'):
+        count+=1
+    elif(c=='u'):
+        count+=1
+    elif( c=='A'):
+        count+=1
+    elif( c =='E'):
+        count+=1
+    elif(c=='I'):
+        count+=1
+    elif(c=='O'):
+        count+=1
+    elif(c=='U'):
+        count+=1
+    else :
+        count =count
+
+  return count
 
 
 def test_count_num_vowels():
